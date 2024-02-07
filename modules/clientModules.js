@@ -11,7 +11,7 @@ const {
   chek_user_salary,
   chek_register_user,
 } = require("../service/services/ApiService");
-const channel_id = -1001490133717;
+const channel_id = -1001351725204;
 const client_bot = new Composer();
 const i18n = new I18n({
   defaultLocale: "uz",
@@ -27,7 +27,7 @@ const pm = client_bot.chatType("private");
 
 const channle_btn = new Menu("channle_btn").url(
   "➕ A'zo bo'lish",
-  "https://t.me/Toshkent_MTU"
+  "https://t.me/tchuzbekistan"
 );
 pm.use(channle_btn);
 pm.use(async (ctx, next) => {
@@ -43,7 +43,7 @@ pm.use(async (ctx, next) => {
     }
     ctx.reply(
       `
-👋 Salom <a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a>. Botdan foydalanish uchun <b>"Toshkent MTU" UK </b> rasmiy kanaliga a'zo bo'lishingiz shart!
+👋 Salom <a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a>. Botdan foydalanish uchun <b>uzdeponing </b> rasmiy kanaliga a'zo bo'lishingiz shart!
 
 <i>A'zo bo'lish uchun <b>➕ A'zo bo'lish</b> tugmasini bosing</i>        
 <i>A'zo bo'lganingizdan so'ng qayta /start buyrug'ini botga yuboring</i>        
@@ -177,6 +177,9 @@ async function salary_show_conversation(conversation, ctx) {
     .text("2022")
     .text("2023")
     .row()
+      .text("2024")
+      .text("2025")
+      .row()
     .text("🔴 Bekor qilish")
     .resized();
   await ctx.reply("Yilni tanlang", {
